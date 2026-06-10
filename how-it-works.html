@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — Copier Tabs Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Copier Tabs Pro</a>
+  <ul class="nav-links">
+    <li><a href="how-it-works.html" class="active">How It Works</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="index.html#final-cta">Pricing</a></li>
+    <li><a href="index.html#final-cta">Support</a></li>
+  </ul>
+  <a href="index.html#final-cta" class="nav-cta">Try it free</a>
+</nav>
+
+<div class="step-indicator" id="stepIndicator">
+  <div class="step-dot active" onclick="document.getElementById('step1').scrollIntoView({behavior:'smooth'})"></div>
+  <div class="step-dot" onclick="document.getElementById('step2').scrollIntoView({behavior:'smooth'})"></div>
+  <div class="step-dot" onclick="document.getElementById('step3').scrollIntoView({behavior:'smooth'})"></div>
+  <div class="step-dot" onclick="document.getElementById('step4').scrollIntoView({behavior:'smooth'})"></div>
+</div>
+
+<div class="page-header">
+  <p class="eyebrow">Process</p>
+  <h1>Four steps to<br>print-ready.</h1>
+  <p>Copier Tabs Pro handles the formatting. You stay in control of the output.</p>
+</div>
+
+<!-- STEP 1 -->
+<div class="step" id="step1">
+  <div class="step-content">
+    <span class="step-number">Step 01</span>
+    <h2 class="step-title">Select your files</h2>
+    <p class="step-body">Choose the files you want included in your copier tab set. Select multiple documents at once — exhibits, pleadings, correspondence, or complete document sets.</p>
+    <p class="step-detail">Process groups of files in a single step. No need to format each tab label individually.</p>
+  </div>
+  <div class="step-media">
+    <div class="video-shell">
+      <div class="play-btn"></div>
+      <span class="video-tag">Select files</span>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 2 -->
+<div class="step" id="step2">
+  <div class="step-content">
+    <span class="step-number">Step 02</span>
+    <h2 class="step-title">Format automatically</h2>
+    <p class="step-body">Copier Tabs Pro reads your file names and formats them for copier tab printing, creating a tab set that's ready for review.</p>
+    <p class="step-detail">No repetitive typing. No manual formatting. The output is generated and waiting for you.</p>
+  </div>
+  <div class="step-media">
+    <div class="video-shell">
+      <div class="play-btn"></div>
+      <span class="video-tag">Auto-format</span>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 3 -->
+<div class="step" id="step3">
+  <div class="step-content">
+    <span class="step-number">Step 03</span>
+    <h2 class="step-title">Fine-tune every detail</h2>
+    <p class="step-body">Review your tab set before printing. Reorder entries, rename labels, remove tabs, and adjust formatting as needed.</p>
+    <p class="step-detail">Control typography, bold styling, capitalization, and spacing to match your preferred output.</p>
+  </div>
+  <div class="step-media">
+    <div class="video-shell">
+      <div class="play-btn"></div>
+      <span class="video-tag">Formatting controls</span>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 4 -->
+<div class="step" id="step4">
+  <div class="step-content">
+    <span class="step-number">Step 04</span>
+    <h2 class="step-title">Print</h2>
+    <p class="step-body">Preview your final tab layout, verify alignment, and print directly to your preferred copier tab sheets.</p>
+    <p class="step-detail">Review the final output before printing to ensure formatting and alignment are exactly as expected.</p>
+  </div>
+  <div class="step-media">
+    <div class="video-shell">
+      <div class="play-btn"></div>
+      <span class="video-tag">Print preview</span>
+    </div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <h2>Ready to try it?</h2>
+  <p>From file selection to production in four steps.</p>
+  <div class="cta-actions">
+    <a href="index.html#final-cta" class="btn-primary">Launch Copier Tabs Pro</a>
+    <a href="features.html" class="btn-ghost">Explore features</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2025 Copier Tabs Pro</span>
+  <ul class="footer-links">
+    <li><a href="features.html">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">Support</a></li>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+  </ul>
+</footer>
+
+<script>
+  const steps = ['step1','step2','step3','step4'];
+  const dots = document.querySelectorAll('.step-dot');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = steps.indexOf(entry.target.id);
+        if (idx !== -1) dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      }
+    });
+  }, { threshold: 0.4 });
+  steps.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
