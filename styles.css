@@ -262,6 +262,8 @@ footer {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .flip-card.flipped .flip-inner, .flip-card:focus .flip-inner { transform: rotateY(180deg); }
+.flip-card:not(.flipped) .flip-back { pointer-events: none; }
+.flip-card.flipped .flip-front { pointer-events: none; }
 .flip-card:focus { outline: none; }
 .flip-front, .flip-back {
   position: absolute; inset: 0;
