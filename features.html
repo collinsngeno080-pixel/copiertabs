@@ -31,7 +31,7 @@
   <div class="grid">
 
     <!-- Card 1: Batch — large -->
-    <div class="flip-card card-large" tabindex="0" role="button" aria-label="Batch Processing">
+    <div class="flip-card" tabindex="0" role="button" aria-label="Batch Processing">
       <div class="flip-inner">
         <div class="flip-front">
           <svg class="feature-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +121,7 @@
     </div>
 
     <!-- Card 5: Live Preview — large -->
-    <div class="flip-card card-large" tabindex="0" role="button" aria-label="Live Preview">
+    <div class="flip-card" tabindex="0" role="button" aria-label="Live Preview">
       <div class="flip-inner">
         <div class="flip-front">
           <svg class="feature-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,6 +191,12 @@
     <li><a href="#">Terms</a></li>
   </ul>
 </footer>
+
+<script>
+  document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+  });
+</script>
 
 </body>
 </html>
