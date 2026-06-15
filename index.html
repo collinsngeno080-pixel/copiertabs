@@ -13,19 +13,18 @@
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <!-- Logo icon -->
-    <svg class="nav-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="20" cy="20" r="19" stroke="#1d2d4a" stroke-width="1.5"/>
-      <text x="20" y="27" font-family="Montserrat,sans-serif" font-size="13" font-weight="800" fill="#1d2d4a" text-anchor="middle">CP</text>
-      <path d="M28 9 C30 5 36 7 35 12 C31 12 29 10 28 9Z" fill="#4CAF50"/>
-    </svg>
-    Copier tabs<strong>Pro</strong>
+    <img src="images/Copier_tabs_pro_logo.png" alt="Copier Tabs Pro" class="nav-icon" height="40">
   </a>
   <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="how-it-works.html">How It Works</a></li>
     <li><a href="features.html">Features</a></li>
-    <li><a href="#contact">Pricing</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li class="nav-mobile-socials">
+      <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    </li>
   </ul>
   <div class="nav-right">
     <a href="#contact" class="nav-cta">Copier tabs<strong>Pro</strong></a>
@@ -54,6 +53,9 @@
       </a>
     </div>
   </div>
+  <button class="nav-hamburger" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ================================================================
@@ -62,18 +64,19 @@
 
 <section id="hero">
   <p class="eyebrow">Built for Legal Support Professionals</p>
-  <h1>From File Names<br>To <span class="text-orange">Print-Ready</span> Tabs.</h1>
+  <h1>From File Names To <span class="text-orange">Print-Ready</span> Tabs.</h1>
   <p class="hero-sub">Select Your Files. Review The Output. Print.</p>
   <div class="hero-actions">
     <a href="#contact" class="btn-primary">Try Copier Tabs Pro</a>
     <a href="how-it-works.html" class="btn-outline">See how it works</a>
   </div>
-  <div class="hero-image"></div>
 </section>
 
 <!-- ================================================================
      TRUST BAR
      ================================================================ -->
+
+<div class="hero-image"></div>
 
 <div id="trust">
   <div class="trust-inner">
@@ -89,8 +92,8 @@
 <section id="brand">
   <h2 class="brand-headline">Made For The People Who Keep<br>Production Moving.</h2>
   <div class="brand-body">
-    <p>Copier Tabs Pro was built for professionals responsible for <strong>preparing exhibits, pleadings, and organized document sets</strong> for production.</p>
-    <p>It formats file names for copier tab printing <strong>automatically</strong> — reducing manual effort while keeping operators in full control of the final output.</p>
+    <p>Copier Tabs Pro was built for professionals responsible for <strong>preparing exhibits,</strong><br><strong>pleadings, and organized document sets</strong> for production.</p>
+    <p>It formats file names for copier tab printing <strong>automatically</strong> -reducing manual effort while keeping operators in full control of the final output.</p>
   </div>
 </section>
 
@@ -99,6 +102,7 @@
      ================================================================ -->
 
 <footer id="contact">
+  <img src="images/Copier_tabs_pro_logo.png" alt="Copier Tabs Pro" class="footer-logo-img">
   <div class="footer-brand">
     <span class="footer-logo">Copier Tabs <span class="text-orange">Pro</span></span>
     <p class="footer-tagline">Select. Review. Adjust. Print.</p>
@@ -111,5 +115,10 @@
   </div>
 </footer>
 
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+</script>
 </body>
 </html>

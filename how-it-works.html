@@ -13,18 +13,18 @@
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <svg class="nav-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="20" cy="20" r="19" stroke="#1d2d4a" stroke-width="1.5"/>
-      <text x="20" y="27" font-family="Montserrat,sans-serif" font-size="13" font-weight="800" fill="#1d2d4a" text-anchor="middle">CP</text>
-      <path d="M28 9 C30 5 36 7 35 12 C31 12 29 10 28 9Z" fill="#4CAF50"/>
-    </svg>
-    Copier tabs<strong>Pro</strong>
+    <img src="images/Copier_tabs_pro_logo.png" alt="Copier Tabs Pro" class="nav-icon" height="40">
   </a>
   <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
     <li><a href="how-it-works.html" class="active">How It Works</a></li>
     <li><a href="features.html">Features</a></li>
-    <li><a href="index.html#contact">Pricing</a></li>
     <li><a href="index.html#contact">Contact</a></li>
+    <li class="nav-mobile-socials">
+      <a href="#" aria-label="Facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    </li>
   </ul>
   <div class="nav-right">
     <a href="index.html#contact" class="nav-cta">Copier tabs<strong>Pro</strong></a>
@@ -50,6 +50,9 @@
       </a>
     </div>
   </div>
+  <button class="nav-hamburger" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="step-indicator" id="stepIndicator">
@@ -139,6 +142,7 @@
 </div>
 
 <footer id="contact">
+  <img src="images/Copier_tabs_pro_logo.png" alt="Copier Tabs Pro" class="footer-logo-img">
   <div class="footer-brand">
     <span class="footer-logo">Copier Tabs <span class="text-orange">Pro</span></span>
     <p class="footer-tagline">Select. Review. Adjust. Print.</p>
@@ -152,6 +156,9 @@
 </footer>
 
 <script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
   const steps = ['step1','step2','step3','step4'];
   const dots = document.querySelectorAll('.step-dot');
   const observer = new IntersectionObserver((entries) => {
