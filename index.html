@@ -6,76 +6,109 @@
 <title>Copier Tabs Pro</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">Copier Tabs Pro</a>
+  <a href="index.html" class="nav-logo">
+    <!-- Logo icon -->
+    <svg class="nav-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="19" stroke="#1d2d4a" stroke-width="1.5"/>
+      <text x="20" y="27" font-family="Montserrat,sans-serif" font-size="13" font-weight="800" fill="#1d2d4a" text-anchor="middle">CP</text>
+      <path d="M28 9 C30 5 36 7 35 12 C31 12 29 10 28 9Z" fill="#4CAF50"/>
+    </svg>
+    Copier tabs<strong>Pro</strong>
+  </a>
   <ul class="nav-links">
     <li><a href="how-it-works.html">How It Works</a></li>
     <li><a href="features.html">Features</a></li>
-    <li><a href="#final-cta">Contact</a></li>
+    <li><a href="#contact">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#final-cta" class="nav-cta">Try Copier Tabs</a>
+  <div class="nav-right">
+    <a href="#contact" class="nav-cta">Copier tabs<strong>Pro</strong></a>
+    <div class="nav-social">
+      <!-- Facebook -->
+      <a href="#" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="#" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <!-- LinkedIn -->
+      <a href="#" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+    </div>
+  </div>
 </nav>
 
+<!-- ================================================================
+     HERO
+     ================================================================ -->
+
 <section id="hero">
-  <p class="eyebrow">Built for legal support professionals</p>
-  <h1>From file names<br>to print-ready tabs.</h1>
-  <p class="hero-sub">Select your files. Review the output. Print.</p>
+  <p class="eyebrow">Built for Legal Support Professionals</p>
+  <h1>From File Names<br>To <span class="text-orange">Print-Ready</span> Tabs.</h1>
+  <p class="hero-sub">Select Your Files. Review The Output. Print.</p>
   <div class="hero-actions">
-    <a href="#final-cta" class="btn-primary">Try Copier Tabs Pro</a>
-    <a href="how-it-works.html" class="btn-ghost">See how it works</a>
+    <a href="#contact" class="btn-primary">Try Copier Tabs Pro</a>
+    <a href="how-it-works.html" class="btn-outline">See how it works</a>
   </div>
-  <div class="hero-video">
-    <div class="play-btn"></div>
-    <span class="video-tag">Product overview</span>
-  </div>
+  <div class="hero-image"></div>
 </section>
+
+<!-- ================================================================
+     TRUST BAR
+     ================================================================ -->
 
 <div id="trust">
   <div class="trust-inner">
     <span class="trust-label">Used by</span>
-    <span class="trust-item">Litigation Support Teams</span>
-    <span class="trust-item">Trial Technicians</span>
-    <span class="trust-item">Legal Operations</span>
-    <span class="trust-item">Document Production Teams</span>
-    <span class="trust-item">Records Specialists</span>
+    <span class="trust-items">Litigation Support Teams &nbsp;|&nbsp; Trial Technicians &nbsp;|&nbsp; Legal Operations &nbsp;|&nbsp; Document Production Teams &nbsp;|&nbsp; Records Specialists</span>
   </div>
 </div>
+
+<!-- ================================================================
+     ABOUT / BRAND
+     ================================================================ -->
 
 <section id="brand">
-  <p class="brand-kicker">About</p>
-  <h2 class="brand-headline">Made for the people who keep<br>production moving.</h2>
-  <p class="brand-body">
-    Copier Tabs Pro was built for professionals responsible for preparing
-    <strong>exhibits, pleadings, and organized document sets</strong> for production.<br><br>
-    It formats file names for copier tab printing automatically — reducing manual effort
-    while keeping operators in full control of the final output.<br><br>
-    <strong>Select. Review. Adjust. Print.</strong>
-  </p>
+  <h2 class="brand-headline">Made For The People Who Keep<br>Production Moving.</h2>
+  <div class="brand-body">
+    <p>Copier Tabs Pro was built for professionals responsible for <strong>preparing exhibits, pleadings, and organized document sets</strong> for production.</p>
+    <p>It formats file names for copier tab printing <strong>automatically</strong> — reducing manual effort while keeping operators in full control of the final output.</p>
+  </div>
 </section>
 
-<div id="final-cta">
-  <h2>Ready when you are.</h2>
-  <p>Consistent, print-ready copier tabs with fewer manual steps.</p>
-  <div class="hero-actions" style="justify-content:center;">
-    <a href="#" class="btn-primary">Launch Copier Tabs Pro</a>
-    <a href="features.html" class="btn-ghost">See features</a>
-  </div>
-</div>
+<!-- ================================================================
+     FOOTER / CONTACT
+     ================================================================ -->
 
-<footer>
-  <span class="footer-copy">© 2025 Copier Tabs Pro</span>
-  <ul class="footer-links">
-    <li><a href="features.html">Features</a></li>
-    <li><a href="#">Pricing</a></li>
-    <li><a href="#">Support</a></li>
-    <li><a href="#">Privacy</a></li>
-    <li><a href="#">Terms</a></li>
-  </ul>
+<footer id="contact">
+  <div class="footer-brand">
+    <span class="footer-logo">Copier Tabs <span class="text-orange">Pro</span></span>
+    <p class="footer-tagline">Select. Review. Adjust. Print.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <span class="footer-sep">|</span>
+      <a href="#">Terms of Service</a>
+    </div>
+    <p class="footer-copy">© 2026 ExhibitPro. All rights reserved.</p>
+  </div>
 </footer>
 
 </body>
