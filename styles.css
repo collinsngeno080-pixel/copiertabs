@@ -197,9 +197,10 @@ footer {
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-bottom: 120px; }
 .hero-image {
+  display: block;
   width: calc(100% - 48px); max-width: 960px;
   aspect-ratio: 16/7;
-  background: #d9d9d9;
+  object-fit: cover;
   border-radius: 16px;
   margin: 40px auto 0;
 }
