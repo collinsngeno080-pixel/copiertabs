@@ -55,12 +55,6 @@
   </button>
 </nav>
 
-<div class="step-indicator" id="stepIndicator">
-  <div class="step-dot active" onclick="document.getElementById('step1').scrollIntoView({behavior:'smooth'})"></div>
-  <div class="step-dot" onclick="document.getElementById('step2').scrollIntoView({behavior:'smooth'})"></div>
-  <div class="step-dot" onclick="document.getElementById('step3').scrollIntoView({behavior:'smooth'})"></div>
-  <div class="step-dot" onclick="document.getElementById('step4').scrollIntoView({behavior:'smooth'})"></div>
-</div>
 
 <div class="page-header">
   <p class="eyebrow">Process</p>
@@ -141,20 +135,6 @@
 <script>
   document.getElementById('navToggle').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('open');
-  });
-  const steps = ['step1','step2','step3','step4'];
-  const dots = document.querySelectorAll('.step-dot');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const idx = steps.indexOf(entry.target.id);
-        if (idx !== -1) dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-      }
-    });
-  }, { threshold: 0.4 });
-  steps.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) observer.observe(el);
   });
 </script>
 
