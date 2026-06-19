@@ -274,10 +274,17 @@ footer {
 }
 .step-media {
   overflow: hidden; align-self: stretch;
+  position: relative; cursor: pointer;
 }
 .step-media img {
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
+.step-player {
+  display: none; position: absolute; inset: 0; background: #000;
+}
+.step-player iframe { width: 100%; height: 100%; border: 0; display: block; }
+.step-media.playing img { display: none; }
+.step-media.playing .step-player { display: block; }
 .step-indicator {
   position: fixed; right: 24px; top: 50%;
   transform: translateY(-50%);

@@ -69,8 +69,9 @@
     <h2 class="step-title">Select Your Files</h2>
     <p class="step-body">Choose the files you want included in your copier tab set. Select multiple documents at once , exhibits, pleadings, correspondence, or complete document sets.</p>
   </div>
-  <div class="step-media">
+  <div class="step-media" data-video-id="H8JQWzlf4f0">
     <img src="images/How_to_select_files.png" alt="How to select files">
+    <div class="step-player" id="yt-H8JQWzlf4f0"></div>
   </div>
 </div>
 
@@ -81,8 +82,9 @@
     <h2 class="step-title">Format Automatically</h2>
     <p class="step-body">Copier TabsPro reads your file names and formats them for copier tab printing, creating a tab set that's ready for review.</p>
   </div>
-  <div class="step-media">
+  <div class="step-media" data-video-id="Sn8wZhHk0nU">
     <img src="images/How_to_format.png" alt="How to format automatically">
+    <div class="step-player" id="yt-Sn8wZhHk0nU"></div>
   </div>
 </div>
 
@@ -93,8 +95,9 @@
     <h2 class="step-title">Fine-Tune Every Detail</h2>
     <p class="step-body">Review your tab set before printing. Reorder entries, rename labels, remove tabs, and adjust formatting as needed.</p>
   </div>
-  <div class="step-media">
+  <div class="step-media" data-video-id="zfDoYz7_Tvw">
     <img src="images/How_to_adjust.png" alt="How to fine-tune every detail">
+    <div class="step-player" id="yt-zfDoYz7_Tvw"></div>
   </div>
 </div>
 
@@ -105,8 +108,9 @@
     <h2 class="step-title">Print</h2>
     <p class="step-body">Preview your final tab layout, verify alignment, and print directly to your preferred copier tab sheets.</p>
   </div>
-  <div class="step-media">
+  <div class="step-media" data-video-id="lo9ePSj-Pww">
     <img src="images/How_to_print.png" alt="How to print">
+    <div class="step-player" id="yt-lo9ePSj-Pww"></div>
   </div>
 </div>
 
@@ -132,10 +136,46 @@
   </div>
 </footer>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
   document.getElementById('navToggle').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('open');
   });
+
+  var ytPlayers = {};
+  var activeMedia = null;
+
+  function onYouTubeIframeAPIReady() {
+    document.querySelectorAll('.step-media[data-video-id]').forEach(function(media) {
+      var videoId = media.dataset.videoId;
+      media.querySelector('img').addEventListener('click', function() {
+        if (activeMedia && activeMedia !== media) {
+          var prevId = activeMedia.dataset.videoId;
+          if (ytPlayers[prevId]) ytPlayers[prevId].stopVideo();
+          activeMedia.classList.remove('playing');
+        }
+        activeMedia = media;
+        media.classList.add('playing');
+        if (!ytPlayers[videoId]) {
+          ytPlayers[videoId] = new YT.Player('yt-' + videoId, {
+            videoId: videoId,
+            playerVars: { autoplay: 1, modestbranding: 1, rel: 0, showinfo: 0 },
+            events: {
+              onStateChange: function(event) {
+                if (event.data === YT.PlayerState.ENDED) {
+                  media.classList.remove('playing');
+                  activeMedia = null;
+                }
+              }
+            }
+          });
+        } else {
+          ytPlayers[videoId].seekTo(0);
+          ytPlayers[videoId].playVideo();
+        }
+      });
+    });
+  }
 </script>
 
 </body>
